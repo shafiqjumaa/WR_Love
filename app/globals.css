@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== الوضع الفاتح / الغامق (خاص بكل شخص) ===== */
+:root {
+  --color-base: #fffaf3;      /* كريمي دافئ */
+  --color-surface: #ffffff;
+  --color-ink: #3a2e39;       /* بني-بنفسجي غامق دافئ */
+}
+.dark {
+  --color-base: #241a26;
+  --color-surface: #2f2233;
+  --color-ink: #fbeff5;
+}
+
+/* ===== Theme الألوان (مشترك بين الشخصين) ===== */
+[data-theme="rose"] {
+  --color-primary: #e85a82;
+  --color-secondary: #ffb4c6;
+  --color-accent: #ffd166;
+}
+[data-theme="sky"] {
+  --color-primary: #4fb8dd;
+  --color-secondary: #a6e3f4;
+  --color-accent: #ffd166;
+}
+[data-theme="sun"] {
+  --color-primary: #f4b400;
+  --color-secondary: #ffe08a;
+  --color-accent: #ff8fa3;
+}
+[data-theme="mint"] {
+  --color-primary: #4fbf8b;
+  --color-secondary: #b7ecd6;
+  --color-accent: #ff8fa3;
+}
+[data-theme="ruby"] {
+  --color-primary: #e5484d;
+  --color-secondary: #ffb3b3;
+  --color-accent: #ffd166;
+}
+[data-theme="violet"] {
+  --color-primary: #9b7ede;
+  --color-secondary: #d9c6ff;
+  --color-accent: #ffd166;
+}
+[data-theme="rainbow"] {
+  --color-primary: #e85a82;
+  --color-secondary: #4fb8dd;
+  --color-accent: #f4b400;
+}
+
+/* ===== خطوط عربية ===== */
+:root {
+  --font-display: "Aref Ruqaa", serif;
+  --font-body: "Tajawal", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+/* احترام تفضيل تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* تركيز واضح لدواعي إمكانية الوصول */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
