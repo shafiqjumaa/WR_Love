@@ -10,7 +10,7 @@ function formatArabicDate(dateStr: string) {
 
 export default function MemoryCard({ memory }: { memory: Memory }) {
   return (
-    <article className="relative rounded-soft bg-surface p-5 shadow-[0_10px_30px_-15px_rgba(58,46,57,0.35)] ring-1 ring-black/5 sm:p-7">
+    <article className="relative neu-raised p-5 sm:p-7">
       <p className="text-sm font-bold opacity-60">{formatArabicDate(memory.date)}</p>
       <h3 className="font-display mt-1 text-2xl" style={{ color: "var(--color-primary)" }}>
         {memory.title}
@@ -43,8 +43,7 @@ export default function MemoryCard({ memory }: { memory: Memory }) {
 
       {memory.linkedMessage && (
         <p
-          className="mt-4 rounded-2xl px-4 py-3 text-sm"
-          style={{ background: "var(--color-secondary)", color: "var(--color-ink)" }}
+          className="neu-inset mt-4 px-4 py-3 text-sm"
         >
           "{memory.linkedMessage}"
         </p>

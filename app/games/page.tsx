@@ -18,7 +18,7 @@ export default function GamesPage() {
           <Link
             key={g.href}
             href={g.href}
-            className="rounded-soft bg-surface p-6 shadow ring-1 ring-black/5 transition hover:-translate-y-1"
+            className="neu-raised p-6 transition hover:-translate-y-1"
           >
             <p className="text-3xl">{g.emoji}</p>
             <p className="font-display mt-2 text-xl" style={{ color: "var(--color-primary)" }}>{g.title}</p>

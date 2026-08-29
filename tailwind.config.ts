@@ -14,11 +14,11 @@ const config: Config = {
         accent: "var(--color-accent)",
       },
       fontFamily: {
-        display: ["var(--font-display)"],
-        body: ["var(--font-body)"],
+        display: ["var(--font-thmanyah)"],
+        body: ["var(--font-thmanyah)"],
       },
       borderRadius: {
-        soft: "1.75rem",
+        soft: "2rem",
       },
       keyframes: {
         drift: {

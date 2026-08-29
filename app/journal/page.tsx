@@ -24,9 +24,9 @@ export default async function JournalPage() {
             required
             rows={3}
             placeholder="اكتب خاطرة..."
-            className="rounded-2xl border border-black/10 bg-surface px-4 py-3 outline-none"
+            className="neu-inset border-0 px-4 py-3 outline-none"
           />
-          <button type="submit" className="self-end rounded-full px-5 py-2 text-sm font-bold text-white" style={{ background: "var(--color-primary)" }}>
+          <button type="submit" className="neu-button self-end px-5 py-2 text-sm font-bold text-white" style={{ background: "var(--color-primary)" }}>
             أضف
           </button>
         </form>
@@ -39,7 +39,7 @@ export default async function JournalPage() {
           <p className="text-center opacity-60">لسا الدفتر فاضي 🌱</p>
         ) : (
           entries.map((e) => (
-            <div key={e.id} className="rounded-soft bg-surface p-4 shadow-sm">
+            <div key={e.id} className="neu-raised p-4">
               <p className="leading-relaxed">{e.content}</p>
             </div>
           ))

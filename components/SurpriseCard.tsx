@@ -18,7 +18,7 @@ export default function SurpriseCard({ surprise }: { surprise: Surprise }) {
     const hours = Math.floor((diff % 86400000) / 3600000);
     const mins = Math.floor((diff % 3600000) / 60000);
     return (
-      <div className="rounded-soft bg-surface p-6 text-center shadow ring-1 ring-black/5">
+      <div className="neu-raised p-6 text-center">
         <p className="text-3xl">🔒</p>
         <h3 className="font-display mt-2 text-xl" style={{ color: "var(--color-primary)" }}>
           {surprise.title}
@@ -32,7 +32,7 @@ export default function SurpriseCard({ surprise }: { surprise: Surprise }) {
   }
 
   return (
-    <div className="animate-popIn rounded-soft p-6 text-center shadow-lg" style={{ background: "var(--color-secondary)" }}>
+    <div className="animate-popIn neu-inset p-6 text-center">
       <p className="text-3xl">🎉</p>
       <h3 className="font-display mt-2 text-xl" style={{ color: "var(--color-primary)" }}>
         {surprise.title}
@@ -48,7 +48,7 @@ export default function SurpriseCard({ surprise }: { surprise: Surprise }) {
         </video>
       )}
       {surprise.question && (
-        <p className="mt-3 rounded-xl bg-white/50 px-4 py-3 font-bold">{surprise.question}</p>
+        <p className="neu-raised mt-3 px-4 py-3 font-bold">{surprise.question}</p>
       )}
     </div>
   );

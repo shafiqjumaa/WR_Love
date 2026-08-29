@@ -36,7 +36,7 @@ export default function ImageUploader({
 
   return (
     <div className="flex flex-col gap-2">
-      <label className="w-fit cursor-pointer rounded-full px-4 py-2 text-sm font-bold text-white" style={{ background: "var(--color-primary)" }}>
+      <label className="neu-button w-fit cursor-pointer px-4 py-2 text-sm font-bold text-white" style={{ background: "var(--color-primary)" }}>
         {uploading ? "جاري الرفع..." : "📷 إضافة صور"}
         <input type="file" accept="image/*" multiple={multiple} onChange={handleFiles} className="hidden" disabled={uploading} />
       </label>

@@ -15,7 +15,7 @@ export default function Timeline({ memories }: { memories: Memory[] }) {
       <div
         aria-hidden="true"
         className="absolute right-4 top-0 h-full w-0.5 sm:right-1/2"
-        style={{ background: "var(--color-secondary)" }}
+        style={{ background: "var(--neu-dark)" }}
       />
       <div className="flex flex-col gap-8">
         {memories.map((memory) => (

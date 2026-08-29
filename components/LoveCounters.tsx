@@ -27,12 +27,12 @@ function OccasionCounter({ occasion }: { occasion: Occasion }) {
   ];
 
   return (
-    <div className="rounded-soft bg-surface p-6 text-center shadow ring-1 ring-black/5">
+    <div className="neu-raised p-6 text-center">
       <p className="font-display text-xl" style={{ color: "var(--color-primary)" }}>{occasion.label}</p>
       <p className="mt-1 text-sm opacity-60">مرّ على قصتنا...</p>
       <div className="mt-4 grid grid-cols-4 gap-2">
         {units.map((u) => (
-          <div key={u.label} className="rounded-xl p-3" style={{ background: "var(--color-secondary)" }}>
+          <div key={u.label} className="neu-inset p-3">
             <p className="text-2xl font-bold">{u.value}</p>
             <p className="text-xs opacity-70">{u.label}</p>
           </div>

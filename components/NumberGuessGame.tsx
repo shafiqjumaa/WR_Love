@@ -138,7 +138,7 @@ export default function NumberGuessGame() {
     return (
       <div className="flex flex-col items-center gap-4">
         {game?.status === "finished" && (
-          <div className="rounded-soft p-5 text-center shadow" style={{ background: "var(--color-secondary)" }}>
+          <div className="neu-inset p-5 text-center">
             <p className="font-bold">
               {game.winner === myEmail ? "🎉 خمّنت صح، فزت!" : "الطرف التاني خمّن رقمك وفاز 🎉"}
             </p>
@@ -149,10 +149,10 @@ export default function NumberGuessGame() {
           type="number"
           value={secretInput}
           onChange={(e) => setSecretInput(e.target.value)}
-          className="w-32 rounded-full border border-black/10 px-4 py-2 text-center"
+          className="neu-inset w-32 border-0 px-4 py-2 text-center"
           placeholder="رقمك السري"
         />
-        <button onClick={createGame} className="rounded-full px-5 py-2 font-bold text-white" style={{ background: "var(--color-primary)" }}>
+        <button onClick={createGame} className="neu-button px-5 py-2 font-bold text-white" style={{ background: "var(--color-primary)" }}>
           ابدأ لعبة جديدة
         </button>
       </div>
@@ -171,10 +171,10 @@ export default function NumberGuessGame() {
           type="number"
           value={secretInput}
           onChange={(e) => setSecretInput(e.target.value)}
-          className="w-32 rounded-full border border-black/10 px-4 py-2 text-center"
+          className="neu-inset w-32 border-0 px-4 py-2 text-center"
           placeholder="رقمك السري"
         />
-        <button onClick={joinGame} className="rounded-full px-5 py-2 font-bold text-white" style={{ background: "var(--color-primary)" }}>
+        <button onClick={joinGame} className="neu-button px-5 py-2 font-bold text-white" style={{ background: "var(--color-primary)" }}>
           انضم للعبة
         </button>
       </div>
@@ -195,10 +195,10 @@ export default function NumberGuessGame() {
             type="number"
             value={guessInput}
             onChange={(e) => setGuessInput(e.target.value)}
-            className="w-32 rounded-full border border-black/10 px-4 py-2 text-center"
+            className="neu-inset w-32 border-0 px-4 py-2 text-center"
             placeholder="تخمينك"
           />
-          <button onClick={submitGuess} className="rounded-full px-5 py-2 font-bold text-white" style={{ background: "var(--color-primary)" }}>
+          <button onClick={submitGuess} className="neu-button px-5 py-2 font-bold text-white" style={{ background: "var(--color-primary)" }}>
             خمّن
           </button>
         </div>
@@ -208,7 +208,7 @@ export default function NumberGuessGame() {
         <p className="mb-2 text-center text-sm opacity-60">سجل التخمينات</p>
         <div className="flex flex-col gap-2">
           {(game.history ?? []).slice().reverse().map((h, i) => (
-            <div key={i} className="flex justify-between rounded-xl bg-surface px-4 py-2 text-sm shadow-sm">
+            <div key={i} className="flex justify-between neu-raised px-4 py-2 text-sm">
               <span>{h.by === myEmail ? "أنت" : "الطرف الثاني"} خمّن {h.guess}</span>
               <span className="font-bold">{h.result}</span>
             </div>

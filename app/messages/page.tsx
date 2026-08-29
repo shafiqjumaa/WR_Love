@@ -36,8 +36,7 @@ export default async function MessagesPage() {
             رسالة اليوم ❤️
           </p>
           <div
-            className="rounded-soft p-6 text-center shadow-lg"
-            style={{ background: "var(--color-secondary)" }}
+            className="neu-inset p-6 text-center"
           >
             <p className="text-lg leading-relaxed">{messageOfTheDay.content}</p>
           </div>

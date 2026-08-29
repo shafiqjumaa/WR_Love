@@ -19,8 +19,7 @@ export default function LoveJar({ messages }: { messages: JarMessage[] }) {
     <div className="flex flex-col items-center gap-6">
       <button
         onClick={pickRandom}
-        className="flex h-40 w-40 items-center justify-center rounded-full text-6xl shadow-xl transition hover:scale-105"
-        style={{ background: "var(--color-secondary)" }}
+        className="neu-icon-circle flex h-40 w-40 items-center justify-center text-6xl transition hover:scale-105"
         aria-label="افتح ورقة من الجرة"
       >
         🫙
@@ -28,7 +27,7 @@ export default function LoveJar({ messages }: { messages: JarMessage[] }) {
       <p className="text-sm opacity-60">اضغط على الجرة لتطلع ورقة</p>
 
       {current && (
-        <div className="animate-popIn max-w-sm rounded-soft p-6 text-center shadow-lg" style={{ background: "var(--color-secondary)" }}>
+        <div className="animate-popIn neu-raised max-w-sm p-6 text-center">
           <p className="text-lg leading-relaxed">{current.content}</p>
         </div>
       )}

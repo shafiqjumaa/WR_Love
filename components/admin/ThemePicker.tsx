@@ -18,11 +18,9 @@ export default function ThemePicker({ currentTheme }: { currentTheme: string }) 
         <button
           key={t.key}
           onClick={() => setSharedTheme(t.key)}
-          className="rounded-2xl p-3 text-sm font-bold ring-2 transition"
+          className={`px-3 py-3 text-sm font-bold transition ${currentTheme === t.key ? "neu-inset" : "neu-button"}`}
           style={{
-            background: currentTheme === t.key ? "var(--color-primary)" : "transparent",
-            color: currentTheme === t.key ? "white" : "var(--color-ink)",
-            borderColor: "var(--color-primary)",
+            color: currentTheme === t.key ? "var(--color-primary)" : "var(--color-ink)",
           }}
         >
           {t.emoji} {t.label}

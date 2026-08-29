@@ -4,20 +4,24 @@
 
 /* ===== الوضع الفاتح / الغامق (خاص بكل شخص) ===== */
 :root {
-  --color-base: #fffaf3;      /* كريمي دافئ */
-  --color-surface: #ffffff;
-  --color-ink: #3a2e39;       /* بني-بنفسجي غامق دافئ */
+  --color-base: #fbe4ea;       /* وردي باستيل ناعم */
+  --color-surface: #fdeef2;    /* أقرب درجة لنفس اللون (أساس تأثير Neumorphism) */
+  --color-ink: #5c2d3a;        /* بني-وردي غامق دافئ */
+  --neu-light: #ffffff;
+  --neu-dark: #d9a3b4;
 }
 .dark {
-  --color-base: #241a26;
-  --color-surface: #2f2233;
-  --color-ink: #fbeff5;
+  --color-base: #2b1c22;
+  --color-surface: #33212a;
+  --color-ink: #fce9ee;
+  --neu-light: #45303a;
+  --neu-dark: #1a1014;
 }
 
 /* ===== Theme الألوان (مشترك بين الشخصين) ===== */
 [data-theme="rose"] {
-  --color-primary: #e85a82;
-  --color-secondary: #ffb4c6;
+  --color-primary: #e5486f;
+  --color-secondary: #ffc3d3;
   --color-accent: #ffd166;
 }
 [data-theme="sky"] {
@@ -51,10 +55,14 @@
   --color-accent: #f4b400;
 }
 
-/* ===== خطوط عربية ===== */
+/* ===== خط ثمانية (Sans) للعناوين والنصوص معًا ===== */
 :root {
-  --font-display: "Aref Ruqaa", serif;
-  --font-body: "Tajawal", sans-serif;
+  --font-display: var(--font-thmanyah), sans-serif;
+  --font-body: var(--font-thmanyah), sans-serif;
+}
+
+.font-display {
+  font-weight: 700;
 }
 
 html {
@@ -65,6 +73,33 @@ body {
   background-color: var(--color-base);
   color: var(--color-ink);
   font-family: var(--font-body);
+}
+
+/* ===== Neumorphism: العناصر تبدو بارزة أو محفورة، بدون تباين لوني حاد ===== */
+.neu-raised {
+  background: var(--color-surface);
+  box-shadow: 8px 8px 18px var(--neu-dark), -8px -8px 18px var(--neu-light);
+  border-radius: 1.75rem;
+}
+.neu-inset {
+  background: var(--color-base);
+  box-shadow: inset 5px 5px 10px var(--neu-dark), inset -5px -5px 10px var(--neu-light);
+  border-radius: 1.5rem;
+}
+.neu-button {
+  background: var(--color-surface);
+  box-shadow: 6px 6px 14px var(--neu-dark), -6px -6px 14px var(--neu-light);
+  border-radius: 999px;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.neu-button:active {
+  box-shadow: inset 4px 4px 8px var(--neu-dark), inset -4px -4px 8px var(--neu-light);
+  transform: scale(0.98);
+}
+.neu-icon-circle {
+  background: var(--color-surface);
+  box-shadow: 5px 5px 10px var(--neu-dark), -5px -5px 10px var(--neu-light);
+  border-radius: 999px;
 }
 
 /* احترام تفضيل تقليل الحركة */

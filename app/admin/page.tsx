@@ -27,8 +27,8 @@ import AdminSection from "@/components/admin/AdminSection";
 import DeleteButton from "@/components/admin/DeleteButton";
 import ThemePicker from "@/components/admin/ThemePicker";
 
-const inputClass = "w-full rounded-xl border border-black/10 bg-base px-4 py-2 outline-none";
-const buttonClass = "self-end rounded-full px-5 py-2 text-sm font-bold text-white";
+const inputClass = "neu-inset w-full border-0 px-4 py-2 outline-none";
+const buttonClass = "neu-button self-end px-5 py-2 text-sm font-bold text-white";
 
 export default async function AdminPage() {
   const configured = isSupabaseConfigured();
@@ -79,7 +79,7 @@ export default async function AdminPage() {
           </form>
           <div className="mt-4 flex flex-col gap-2">
             {messages.map((m) => (
-              <div key={m.id} className="flex items-center justify-between rounded-xl bg-base px-4 py-2 text-sm">
+              <div key={m.id} className="neu-raised flex items-center justify-between px-4 py-2 text-sm">
                 <span className="truncate">{m.content}</span>
                 <DeleteButton action={deleteMessage} id={m.id} />
               </div>
@@ -101,7 +101,7 @@ export default async function AdminPage() {
           </form>
           <div className="mt-4 flex flex-col gap-2">
             {memories.map((m) => (
-              <div key={m.id} className="flex items-center justify-between rounded-xl bg-base px-4 py-2 text-sm">
+              <div key={m.id} className="flex items-center justify-between neu-raised px-4 py-2 text-sm">
                 <span className="truncate">{m.title}</span>
                 <DeleteButton action={deleteMemory} id={m.id} />
               </div>
@@ -122,7 +122,7 @@ export default async function AdminPage() {
           </form>
           <div className="mt-4 flex flex-col gap-2">
             {surprises.map((s) => (
-              <div key={s.id} className="flex items-center justify-between rounded-xl bg-base px-4 py-2 text-sm">
+              <div key={s.id} className="flex items-center justify-between neu-raised px-4 py-2 text-sm">
                 <span className="truncate">{s.title}</span>
                 <DeleteButton action={deleteSurprise} id={s.id} />
               </div>
@@ -138,7 +138,7 @@ export default async function AdminPage() {
           </form>
           <div className="mt-4 flex flex-col gap-2">
             {jarMessages.map((j) => (
-              <div key={j.id} className="flex items-center justify-between rounded-xl bg-base px-4 py-2 text-sm">
+              <div key={j.id} className="flex items-center justify-between neu-raised px-4 py-2 text-sm">
                 <span className="truncate">{j.content}</span>
                 <DeleteButton action={deleteJarMessage} id={j.id} />
               </div>
@@ -155,7 +155,7 @@ export default async function AdminPage() {
           </form>
           <div className="mt-4 flex flex-col gap-2">
             {occasions.map((o) => (
-              <div key={o.id} className="flex items-center justify-between rounded-xl bg-base px-4 py-2 text-sm">
+              <div key={o.id} className="flex items-center justify-between neu-raised px-4 py-2 text-sm">
                 <span className="truncate">{o.label}</span>
                 <DeleteButton action={deleteOccasion} id={o.id} />
               </div>
@@ -176,7 +176,7 @@ export default async function AdminPage() {
           </form>
           <div className="mt-4 flex flex-col gap-2">
             {gameQuestions.map((q) => (
-              <div key={q.id} className="flex items-center justify-between rounded-xl bg-base px-4 py-2 text-sm">
+              <div key={q.id} className="flex items-center justify-between neu-raised px-4 py-2 text-sm">
                 <span className="truncate">{q.content}</span>
                 <DeleteButton action={deleteGameQuestion} id={q.id} />
               </div>

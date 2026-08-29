@@ -10,7 +10,7 @@ function formatArabicDate(dateStr: string) {
 
 export default function MessageCard({ message }: { message: LoveMessage }) {
   return (
-    <article className="rounded-soft bg-surface p-5 shadow-[0_10px_30px_-15px_rgba(58,46,57,0.35)] ring-1 ring-black/5">
+    <article className="neu-raised p-5">
       <p className="text-xs font-bold opacity-50">{formatArabicDate(message.date)}</p>
       <p className="mt-2 leading-relaxed">{message.content}</p>
       {message.imageUrl && (

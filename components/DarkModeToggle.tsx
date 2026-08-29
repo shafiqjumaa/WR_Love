@@ -22,7 +22,7 @@ export default function DarkModeToggle() {
     <button
       onClick={toggle}
       aria-label="تبديل الوضع الفاتح والغامق"
-      className="fixed left-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-surface text-lg shadow ring-1 ring-black/5"
+      className="neu-icon-circle fixed left-4 top-4 z-50 flex h-11 w-11 items-center justify-center text-lg"
     >
       {dark ? "☀️" : "🌙"}
     </button>

@@ -9,18 +9,18 @@ export default function StoryTabs({ memories }: { memories: Memory[] }) {
 
   return (
     <div>
-      <div className="mx-auto mb-8 flex w-fit gap-2 rounded-full bg-surface p-1 shadow">
+      <div className="neu-inset mx-auto mb-8 flex w-fit gap-2 p-1">
         <button
           onClick={() => setTab("timeline")}
-          className="rounded-full px-5 py-2 text-sm font-bold transition"
-          style={tab === "timeline" ? { background: "var(--color-primary)", color: "white" } : {}}
+          className={`px-5 py-2 text-sm font-bold transition ${tab === "timeline" ? "neu-button text-white" : ""}`}
+          style={tab === "timeline" ? { background: "var(--color-primary)" } : {}}
         >
           الخط الزمني 📖
         </button>
         <button
           onClick={() => setTab("gallery")}
-          className="rounded-full px-5 py-2 text-sm font-bold transition"
-          style={tab === "gallery" ? { background: "var(--color-primary)", color: "white" } : {}}
+          className={`px-5 py-2 text-sm font-bold transition ${tab === "gallery" ? "neu-button text-white" : ""}`}
+          style={tab === "gallery" ? { background: "var(--color-primary)" } : {}}
         >
           معرض الصور 🖼️
         </button>

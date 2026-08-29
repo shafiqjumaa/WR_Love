@@ -19,13 +19,13 @@ export default function QuestionsPlayer({ questions }: { questions: GameQuestion
 
   return (
     <div className="flex flex-col items-center gap-5">
-      <div className="animate-popIn w-full rounded-soft p-8 text-center shadow-lg" style={{ background: "var(--color-secondary)" }}>
+      <div className="animate-popIn neu-inset w-full p-8 text-center">
         <p className="text-xs font-bold opacity-60">{KIND_LABEL[q.kind]}</p>
         <p className="mt-3 text-lg leading-relaxed">{q.content}</p>
       </div>
       <button
         onClick={() => setIndex((i) => i + 1)}
-        className="rounded-full px-6 py-2 font-bold text-white"
+        className="neu-button px-6 py-2 font-bold text-white"
         style={{ background: "var(--color-primary)" }}
       >
         السؤال التالي ←

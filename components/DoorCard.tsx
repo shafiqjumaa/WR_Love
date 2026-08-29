@@ -16,13 +16,10 @@ export default function DoorCard({
   return (
     <Link
       href={href}
-      className="group relative flex flex-col items-center gap-2 rounded-soft bg-surface/80 p-6 text-center shadow-[0_10px_30px_-15px_rgba(58,46,57,0.35)] ring-1 ring-black/5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_40px_-15px_rgba(58,46,57,0.45)] animate-popIn"
+      className="neu-raised group relative flex flex-col items-center gap-2 p-6 text-center transition-transform duration-300 hover:-translate-y-1.5 animate-popIn"
       style={{ animationDelay: delay }}
     >
-      <span
-        className="flex h-14 w-14 items-center justify-center rounded-full text-2xl transition-transform duration-300 group-hover:scale-110"
-        style={{ background: "var(--color-secondary)" }}
-      >
+      <span className="neu-icon-circle flex h-14 w-14 items-center justify-center text-2xl transition-transform duration-300 group-hover:scale-110">
         {emoji}
       </span>
       <span className="font-display text-xl" style={{ color: "var(--color-primary)" }}>
