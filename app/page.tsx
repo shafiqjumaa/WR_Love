@@ -32,6 +32,10 @@ export default function HomePage() {
           <DoorCard key={d.href} {...d} delay={`${i * 0.08}s`} />
         ))}
       </section>
+
+      <p className="relative z-10 mt-14 text-center">
+        <a href="/admin" className="text-sm opacity-50 hover:opacity-90">🛠️ لوحة التحكم</a>
+      </p>
     </main>
   );
 }

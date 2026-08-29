@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Tajawal, Aref_Ruqaa } from "next/font/google";
 import "./globals.css";
+import DarkModeToggle from "@/components/DarkModeToggle";
+import { getSharedTheme } from "@/lib/data";
+import { isSupabaseConfigured } from "@/lib/supabase/serverClient";
 
 const body = Tajawal({
   subsets: ["arabic"],
@@ -19,14 +22,19 @@ export const metadata: Metadata = {
   description: "مساحتنا الرومانسية الخاصة بنا نحن الاثنين فقط",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const theme = isSupabaseConfigured() ? await getSharedTheme() : "rose";
+
   return (
-    <html lang="ar" dir="rtl" data-theme="rose" className={`${body.variable} ${display.variable}`}>
-      <body>{children}</body>
+    <html lang="ar" dir="rtl" data-theme={theme} className={`${body.variable} ${display.variable}`}>
+      <body>
+        <DarkModeToggle />
+        {children}
+      </body>
     </html>
   );
 }
